@@ -1,4 +1,6 @@
+use tokio::net::TcpListener;
+
 #[tokio::main]
 async fn main() {
-    println!("Hello, world!");
+    let listener = TcpListener::bind("localhost:8080").await.unwrap();
 }
